@@ -23,9 +23,6 @@ int main(int argc, char* argv[])
         cout << "hw1: [m] [n] [algo] [direction]" << endl;
         cout << "[m]              size of the random integer vector array" << endl;
         cout << "[n]              dimension of integer vector array" << endl;
-        cout << "[algo]           0: run insertion sort" << endl;
-        cout << "                 1: run merge sort" << endl;
-        cout << "                 <0: run improved insertion sort" << endl;
         cout << "[direction]      0: random" << endl;
         cout << "                 1: sorted" << endl;
         cout << "                 -1: reverse sorted" << endl;
@@ -42,12 +39,7 @@ int main(int argc, char* argv[])
         n = 0;
 
     if (argc > 3)
-        a = atoi(argv[3]);
-    else
-        a = 0;
-
-    if (argc > 4)
-        d = atoi(argv[4]);
+        d = atoi(argv[3]);
     else
         d = 0;
 
@@ -86,33 +78,11 @@ int main(int argc, char* argv[])
 // }
 // cout << endl;
 
-/*
- * Do a merge sort or an insertion sort
- */
-    switch (a) {
-        case 0: {
-            cout << "Running insertion sort algorithm: " << endl;
-            t.start();
-            insertion_sort(input_array, n, 0, m-1);
-            t.stop();
-        } break;
-        case 1: {
-            cout << "Running merge sort algorithm: " << endl;
+
+    cout << "Running merge sort algorithm: " << endl;
             t.start();
             merge_sort(input_array, n, 0, m-1);
             t.stop();
-
-        } break;
-        default: {
-            if (a < 0)
-            {
-                cout << "Running improved insertion sort algorithm: " << endl;
-                t.start();
-                insertion_sort_im(input_array, n, 0, m-1);
-                t.stop();
-            }
-        } break;
-    }
 
     cout << "Timer (sort): " << t << endl;
 
