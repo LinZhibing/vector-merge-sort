@@ -1,6 +1,3 @@
-
-#ifndef CS590_SORT_H
-#define CS590_SORT_H
 #include "random_generator.h"
 
 using namespace std;
@@ -21,4 +18,4 @@ using namespace std;
     void remove_ivector(int**, int);
 
 
-#endif //CS590_SORT_H
+#endif
