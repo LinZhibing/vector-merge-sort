@@ -1,9 +1,3 @@
-//
-// Created by 林芷冰 on 2/18/22.
-//
-
-#ifndef CS590_RANDOM_GENERATOR_H
-#define CS590_RANDOM_GENERATOR_H
 #include <string>
 
 #define HAVE_RANDOM
@@ -54,4 +48,4 @@ random_generator& operator >> (random_generator&, long&);
 random_generator& operator >> (random_generator&, double&);
 
 
-#endif //CS590_RANDOM_GENERATOR_H
+#endif 
